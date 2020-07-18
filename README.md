@@ -1,27 +1,18 @@
-# Pokedex3
+## Pokedex
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 10.0.3.
 
-## Development server
+Utilizando a Api https://pokeapi.co/api/v2/pokemon desenvolvi uma pequena Pokedex. Onde é possivel consultar alguns detalhes do pokemon bem como o capturar.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+> Tela Inicial
+![image](https://user-images.githubusercontent.com/8752639/87862692-5aa7a600-c929-11ea-9cbc-9fb2276e31cc.png)
 
-## Code scaffolding
+> Detalhe do Pokemon
+![image](https://user-images.githubusercontent.com/8752639/87862704-7d39bf00-c929-11ea-879f-0f190a630eb5.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> Pokemon Capturado
+![image](https://user-images.githubusercontent.com/8752639/87862717-917dbc00-c929-11ea-896f-d4a92f5b2c61.png)
 
-## Build
+## Server de Desenvolvimento
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Copie ou execute um fork, execute o comando `npm instal` para instalar as dependecias, após execute `ng serve` para um servidor de desenvolvimento. Navegue até `http://localhost:4200/`.
