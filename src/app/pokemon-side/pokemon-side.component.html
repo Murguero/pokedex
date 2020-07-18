@@ -1,0 +1,47 @@
+<div *ngIf="pokemon" class="pokemon-view">
+  <div class="container-pokemon">
+    <div class="contaier-title-pokemon">
+      <h1 class="pokemon-title">{{ pokemon?.name | titlecase }}
+        <span>{{ (pokemon?.id > 10 ? '#0' : '#00' ) + pokemon?.id }}</span>
+      </h1>
+      <div>
+        <img width="150" [src]="pokemon.sprites.front_default">
+        <img width="150" [src]="pokemon.sprites.back_default">
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <h1 class="title-style-h1">Caracteristicas</h1>
+        <p>Altura:<br>
+          <span>{{ (pokemon?.height / 3.281).toFixed(2) }} Metros</span>
+        </p>
+        <p>Peso:<br>
+          <span>{{ (pokemon?.weight / 2.205).toFixed(2) }} Kg</span>
+        </p>
+      </div>
+      <div class="column">
+        <h1 class="title-style-h1">Tipo</h1>
+        <div class="container-item-type">
+          <div *ngFor="let item of pokemon?.types" class="item-type-{{ item.type?.name }}">
+            {{ item.type?.name }}
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <h1 class="title-style-h1">Habilidades</h1>
+        <div *ngFor="let item of pokemon?.abilities" class="container-abilities">
+          {{ item.ability?.name }}
+        </div>
+      </div>
+      <div class="container-button">
+        <div class="caught-label">Capturar pokemon</div>
+        <input
+          class="caught-check"
+          type="checkbox"
+          (change)="onChange($event, pokemon)"
+          [checked]="caughtPokemon.has(pokemon.id)"
+        >
+      </div>
+    </div>
+  </div>
+</div>

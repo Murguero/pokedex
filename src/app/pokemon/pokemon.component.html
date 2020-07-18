@@ -1,0 +1,24 @@
+<div class="pokemon-view">
+  <div class="container-input">
+    <input type="text" placeholder="Buscar pokemon" [(ngModel)]="query">
+  </div>
+  <div class="grid" *ngIf="pokemon">
+    <div class="column" *ngFor="let item of pokemon | search: query" [routerLink]="['/detail', item?.name]">
+      <p>{{ (item?.id > 10 ? '#0' : '#00' ) + item?.id }} - {{ item?.name }}</p>
+      <div class="pokemon">
+
+      <img [src]="item?.imageFront" alt={{item?.name}}>
+        <div>
+          <img
+        class="pokeball"
+        src="../../assets/pokeball.png"
+        *ngIf="caughtPokemon.has(item?.id)"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-button">
+    <button class="button-style" (click)="onSubmit()">Carregar mais pokemons</button>
+  </div>
+</div>

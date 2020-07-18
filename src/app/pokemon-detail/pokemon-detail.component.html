@@ -1,0 +1,18 @@
+<div class="pokemon-view">
+  <div class="container-form">
+    <form (submit)="submitPokemon($event)">
+      <input class="style-input" type="text" placeholder="Pesquisar pokemon" name="id">
+    </form>
+  </div>
+  <div class="section group">
+    <div class="col span_1_of_2">
+      <pokemon-side [pokemon]="pokemon"></pokemon-side>
+    </div>
+    <div class="col span_1_of_2">
+      <pokemon-side-bar [pokemon]="pokemon"></pokemon-side-bar>
+    </div>
+  </div>
+  <a [routerLink]="['/']" class="add-detail">
+    <fa-icon [icon]="faChevronCircleLeft" class="fas fa-chevron-circle-left fa-4x"></fa-icon>
+  </a>
+</div>
